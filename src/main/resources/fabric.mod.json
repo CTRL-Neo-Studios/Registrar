@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "registrar",
+  "version": "${version}",
+  "name": "Registrar",
+  "description": "Precise Manufacturing for Fabric",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/registrar/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "dev.ctrlneo.registrar.client.RegistrarClient"
+    ],
+    "main": [
+      "dev.ctrlneo.registrar.Registrar"
+    ]
+  },
+  "mixins": [
+    "registrar.mixins.json",
+    {
+      "config": "registrar.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
